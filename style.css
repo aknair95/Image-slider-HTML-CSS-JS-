@@ -74,13 +74,14 @@ header .menu {
     left: 10%;
     top: 10%;
     width: 500px;
+    height: auto;
     max-width: 80%;
     z-index: 1;
 }
 
 .slider .list .item .content p:nth-child(1) {
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 15px;
 }
 
 .slider .list .item .content h2 {
@@ -143,12 +144,13 @@ header .menu {
 }
 
 .thumbnails {
+    width: 100%;
     position: absolute;
     bottom: 10px;
     z-index: 11;
     display: flex;
+    justify-content: center;
     gap: 10px;
-    width: 100%;
     height: 180px;
     padding: 0 50px;
     box-sizing: border-box;
@@ -160,10 +162,11 @@ header .menu {
 }
 
 .thumbnails .item {
-    width: 20%;
+    width: 195px;
     height: 150px;
     filter: brightness(0.5);
     transition: 0.5s;
+    flex-shrink: 0;
 }
 
 .thumbnails .item img {
@@ -182,7 +185,64 @@ header .menu {
     inset: auto 10px 10px 10px;
 }
 
-@media screen and (max-width=678px) {
+@media (max-width: 767.98px) {
+    .thumbnails {
+        justify-content: start;
+    }
+
+    .thumbnails .item {
+        width: 150px;
+        height: 120px;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 60px;
+    }
+
+    .arrows {
+        top: 10%;
+        right: 20px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 12px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .thumbnails {
+        justify-content: start;
+        padding-top: 20px;
+    }
+
+    .thumbnails .item {
+        width: 170px;
+        height: 130px;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 70px;
+    }
+
+    .arrows {
+        top: 20%;
+        right: 40px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 13px;
+    }
 
 }
     
